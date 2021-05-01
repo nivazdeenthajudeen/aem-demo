@@ -1,0 +1,7 @@
+Latest Pade Display
+
+<sly data-sly-use.latestPageDisplayer="${'com.mailcompany.core.handlers.LatestPageDisplayer'}">
+	<sly data-sly-list="${latestPageDisplayer.latestPageDetails}">
+		<a href="${item.path}.html">${item.title}</a><br/>
+	</sly>
+</sly>

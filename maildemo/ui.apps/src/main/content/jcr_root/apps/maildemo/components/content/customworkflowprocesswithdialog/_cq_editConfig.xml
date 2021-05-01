@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:disableTargeting="{Boolean}true"
+    jcr:primaryType="cq:EditConfig">
+    <cq:formParameters
+        jcr:primaryType="nt:unstructured"
+        PROCESS="com.mailcompany.core.workflow.NinosWorkflowProcess"
+        PROCESS_AUTO_ADVANCE="true"
+        jcr:title="Custom Workflow Process with dialog"/>
+    <cq:listeners
+        jcr:primaryType="cq:EditListenersConfig"
+        afterdelete="CQ.workflow.flow.Step.afterDelete"
+        afteredit="CQ.workflow.flow.Step.afterEdit"
+        afterinsert="CQ.workflow.flow.Step.afterInsert"
+        afterMove="REFRESH_PAGE"/>
+</jcr:root>

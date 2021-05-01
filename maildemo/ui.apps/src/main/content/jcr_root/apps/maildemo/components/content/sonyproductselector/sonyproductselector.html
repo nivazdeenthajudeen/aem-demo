@@ -1,0 +1,17 @@
+<div class="product-selector">
+    <h2>Product Selector</h2>
+    <div class="product-dropdown">
+        <select data-currnode="${currentNode.path}" name="product-category">
+            <option value="">All Products</option>
+			<sly data-sly-use.sonyProdSelInstance="${'com.mailcompany.core.models.SonyProdSelectorModel'}">
+				<sly data-sly-list="${sonyProdSelInstance.tags}">
+					<option value="${item}">${item}</option>
+				</sly>
+			</sly>            
+        </select>
+    </div>
+    <div class="product-result">
+		<sly data-sly-include="result.html">
+		</sly>
+    </div>
+</div>

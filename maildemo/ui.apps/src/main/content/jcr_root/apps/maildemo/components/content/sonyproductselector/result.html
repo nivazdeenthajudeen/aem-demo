@@ -1,0 +1,8 @@
+<sly data-sly-use.sonyProdSelInstance="${'com.mailcompany.core.models.SonyProdSelectorModel'}">
+	<ul data-sly-list="${sonyProdSelInstance.resultPages}">
+        <li>
+            <a href="${item.path}">${item.name}</a>
+            <p>${item.description}</p>
+        </li> 
+	</ul>
+</sly>          

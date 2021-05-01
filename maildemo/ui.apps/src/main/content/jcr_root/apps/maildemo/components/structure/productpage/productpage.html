@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title> ${currentPage.title} </title>
+    </head>
+    <body>
+		<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+			<sly data-sly-call="${clientLib.css @ categories='maildemo.base'}" data-sly-unwrap>
+			</sly>
+		</sly>    
+		<div data-sly-include="body.html">
+		</div>
+		<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+			<sly data-sly-call="${clientLib.js @ categories='maildemo.base'}" data-sly-unwrap>
+			</sly>
+		</sly>       	
+    </body>
+</html>

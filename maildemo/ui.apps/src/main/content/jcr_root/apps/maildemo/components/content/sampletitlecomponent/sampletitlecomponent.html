@@ -1,0 +1,18 @@
+Sample Title Component
+<br/>
+<sly data-sly-use.sampleTitleHandler="${'com.mailcompany.core.handlers.SampleTitleComponentHandler'}">
+	<sly data-sly-list="${sampleTitleHandler.headerLinks}">
+		${item.label}
+		${item.path}
+		<br/>
+	</sly>
+</sly>
+
+
+<sly data-sly-use.sampleModelHandler="${'com.mailcompany.core.models.SampleTitleComponentModel'}">
+	<sly data-sly-list="${sampleModelHandler.headerLinks}">
+		${item.label}
+		${item.path}
+		<br/>
+	</sly>
+</sly>
